@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
@@ -96,13 +97,29 @@ public:
 		return this;
 	}
 
-	// TODO: fix scale
 	Matrix* generateScaleMatrix(double sx, double sy) {
 		this->createSimpleMatrix(3);
 		this->mas[0][0] = sx;
 		this->mas[1][1] = sy;
 		return this;
 	}
+
+	Matrix* createRotateMatrixX(double angle) {
+		angle = angleToRad(angle);
+		createSimpleMatrix(3);
+		mas[0][0] = cos(angle);
+		mas[1][0] = -sin(angle);
+		mas[0][1] = sin(angle);
+		mas[1][1] = cos(angle);
+		return this;
+	}
+
+private:
+
+	double angleToRad(double angle) {
+		return angle * M_PI / 180;
+	}
+
 
 };
 

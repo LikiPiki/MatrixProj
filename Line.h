@@ -29,10 +29,13 @@ public:
 
 	void draw(SDL_Renderer *renderer) override {
         SDL_SetRenderDrawColor(renderer, 255, 255, 255, SDL_ALPHA_OPAQUE);
-		SDL_RenderDrawLine(renderer, mt->mas[0][0], mt->mas[0][1], mt->mas[1][0], mt->mas[1][1]);
+		SDL_RenderDrawLine(renderer,
+                           ceil(mt->mas[0][0]), ceil(mt->mas[0][1]),
+                           ceil(mt->mas[1][0]), ceil(mt->mas[1][1])
+        );
 	}
 
-	void move(double dx, double dy) {
+	void move(double dx, double dy) override{
 		auto *move = new Matrix();
 		move->generateMoveMatrix(dx, dy);
 		mt = mt->mul(move);
@@ -50,6 +53,23 @@ public:
 		mt->printMatrix();
 	}
 
+    void rotateX(double angle) {
+        auto rotateX = new Matrix();
+        rotateX->createRotateMatrixX(angle);
+
+        moveToZero();
+        mt = mt->mul(rotateX);
+        moveAfter();
+
+        normalizeCoordinates();
+        mt->printMatrix();
+    }
+
+
+private:
+
+    double ox, oy;
+
     void moveToZero() {
         ox = - (mt->mas[0][0] + mt->mas[1][0]) / 2;
         oy = - (mt->mas[0][1] + mt->mas[1][1]) / 2;
@@ -62,9 +82,13 @@ public:
         move(ox, oy);
     }
 
-private:
-
-    int ox, oy;
+    void normalizeCoordinates() {
+        for (int i = 0; i < mt->n; i++) {
+            for (int j = 0; j < mt->m; j++) {
+                mt->mas[i][j] /= mt->mas[i][mt->m-1];
+            }
+        }
+    }
 
 };
 

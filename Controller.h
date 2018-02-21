@@ -27,11 +27,19 @@ void checkKeys(SDL_Event event, Line *ln) {
         	ln->move(-3, 0);
             break;
         case SDLK_z:
-        	ln->scale(1.1, 1.1);
+        	ln->scale(1.10, 1.10);
         	break;
         case SDLK_x:
-        	ln->scale(0.9, 0.9);
+        	ln->scale(0.90, 0.90);
         	break;
+      	case SDLK_q:
+            ln->rotateX(5);
+			break;
+      	case SDLK_w:
+          	ln->rotateX(-5);
+          	break;
+
+
 		  default:break;
 	  }
     }
