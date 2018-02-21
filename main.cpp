@@ -18,9 +18,8 @@ int main(int argc, char* argv[]) {
     SDL_Renderer *renderer;
     auto *controller = new Controller();
 
-    auto *ln = new Line(100, 400, 250, 140);
-
-    auto *bl = new BLine(10, 10, 300, 15);
+    auto *ln = new Line(300, 400, 500, 140);
+    auto *bl = new BLine(10, 10, 300, 300);
 
     controller->push(ln);
     controller->push(bl);

@@ -17,22 +17,27 @@ public:
         double y1 = mt->mas[0][1];
         double y2 = mt->mas[1][1];
 
-        double deltax = abs(x2 - x1);
-        double deltay = abs(y2 - y1);
-        double error = 0;
-        double deltaerr = deltay;
-        double y = y1;
-        double diry = y2 - y1;
+        double deltaX = abs(x2 - x1);
+        double deltaY = abs(y2 - y1);
+        double signX = x1 < x2 ? 1 : -1;
+        double signY = y1 < y2 ? 1 : -1;
 
-        if (diry > 0) diry = 1;
-        if (diry < 0) diry = -1;
+        double error = deltaX - deltaY;
 
-        for (double x = x1; x < x2; x++) {
-            SDL_RenderDrawPoint(renderer, x, y);
-            error = error + deltaerr;
-            if (2 * error >= deltax) {
-                y = y + diry;
-                error -= deltax;
+        SDL_RenderDrawPoint(renderer, x2, y2);
+        while(x1 != x2 || y1 != y2) {
+            SDL_RenderDrawPoint(renderer, x1, y1);
+            double error2 = error * 2;
+
+            if(error2 > -deltaY)
+            {
+                error -= deltaY;
+                x1 += signX;
+            }
+            if(error2 < deltaX)
+            {
+                error += deltaX;
+                y1 += signY;
             }
         }
     }
