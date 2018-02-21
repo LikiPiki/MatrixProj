@@ -32,7 +32,8 @@ void checkKeys(SDL_Event event, Line *ln) {
         case SDLK_x:
         	ln->scale(0.9, 0.9);
         	break;
-      }
+		  default:break;
+	  }
     }
 }
 

@@ -4,9 +4,8 @@ project(laba)
 set(CMAKE_CXX_STANDARD 11)
 file(GLOB SRC "*.cpp" "*.h")
 
-FIND_PATH(SDL SDL2/SDL.h)
-message("find " ${SDL})
+find_package(SDL2 REQUIRED)
+include_directories(${SDL2_INCLUDE_DIRS})
 
 add_executable(${PROJECT_NAME} ${SRC})
-include_directories(${SDL})
-target_link_libraries(${PROJECT_NAME} ${SDL})
+target_link_libraries(${PROJECT_NAME} ${SDL2_LIBRARIES})
