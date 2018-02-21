@@ -1,6 +1,6 @@
 # Cmake C++ 11 project
 
-<img src="https://github.com/LikiPiki/MatrixProj/raw/master/screen.jpg"/>
+<img src="https://github.com/LikiPiki/MatrixProj/raw/master/screen.png"/>
 
 
 ## How to install?
