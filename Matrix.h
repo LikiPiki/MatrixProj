@@ -7,7 +7,7 @@ using namespace std;
 
 class Matrix {
 public:
-	int **mas;
+	double **mas;
 	int n;
 	int m;
 
@@ -24,9 +24,9 @@ public:
 	}
 
 	Matrix* createM(int n, int m) {
-		mas = reinterpret_cast<int **>(new double*[n]);
+		mas = new double*[n];
 		for (int i = 0; i < n; i++) {
-			mas[i] = reinterpret_cast<int *>(new double[m]);
+			mas[i] = new double[m];
 		}
 		for (int i = 0; i < n; i++)
 			for (int j = 0; j < m; j++)
@@ -38,9 +38,9 @@ public:
 	}
 
 	Matrix* createM1(int n, int m) {
-		mas = reinterpret_cast<int **>(new double*[n]);
+		mas = new double*[n];
 		for (int i = 0; i < n; i++) {
-			mas[i] = reinterpret_cast<int *>(new double[m]);
+			mas[i] = new double[m];
 		}
 		for (int i = 0; i < n; i++)
 			for (int j = 0; j < m; j++)
@@ -73,7 +73,7 @@ public:
 
 	Matrix* mul(Matrix *mat) {
 		if (this->m == mat->n) {
-			Matrix *tmp = new Matrix();
+			auto *tmp = new Matrix();
 			tmp->createM(this->n, mat->m);
 			for (int i = 0; i < this->n; i++) {
 				for (int j = 0; j < mat->m; j++) {
@@ -100,7 +100,7 @@ public:
 	Matrix* generateScaleMatrix(double sx, double sy) {
 		this->createSimpleMatrix(3);
 		this->mas[0][0] = sx;
-		this->mas[0][0] = sy;
+		this->mas[1][1] = sy;
 		return this;
 	}
 

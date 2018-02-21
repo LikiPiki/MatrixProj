@@ -15,8 +15,7 @@ using namespace std;
 int main(int argc, char* argv[]) {
 
     SDL_Renderer *renderer;
-    auto *ln = new Line(100, 150, 250, 300);
-    ln->move(10, 10);
+    auto *ln = new Line(100, 400, 250, 140);
 
     vector<Shape*> shapes;
     shapes.push_back(ln);

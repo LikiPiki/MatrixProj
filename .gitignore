@@ -6,3 +6,5 @@ cmake_install.cmake
 compile_commands.json
 laba
 SDL2
+cmake-build-debug
+cmake-build-debug/laba.cbp

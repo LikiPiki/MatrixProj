@@ -26,6 +26,7 @@ public:
 		mt->printMatrix();
 	}
 
+
 	void draw(SDL_Renderer *renderer) override {
         SDL_SetRenderDrawColor(renderer, 255, 255, 255, SDL_ALPHA_OPAQUE);
 		SDL_RenderDrawLine(renderer, mt->mas[0][0], mt->mas[0][1], mt->mas[1][0], mt->mas[1][1]);
@@ -41,9 +42,29 @@ public:
 	void scale(double sx, double sy) {
 		auto *scale = new Matrix();
 		scale->generateScaleMatrix(sx, sy);
+
+        moveToZero();
 		mt = mt->mul(scale);
+        moveAfter();
+
 		mt->printMatrix();
 	}
+
+    void moveToZero() {
+        ox = - (mt->mas[0][0] + mt->mas[1][0]) / 2;
+        oy = - (mt->mas[0][1] + mt->mas[1][1]) / 2;
+        move(ox, oy);
+        ox = -ox;
+        oy = -oy;
+    }
+
+    void moveAfter() {
+        move(ox, oy);
+    }
+
+private:
+
+    int ox, oy;
 
 };
 
