@@ -8,96 +8,98 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/kirill/CLion/MatrixProj/cmake-build-debug"/>
+				<Option working_dir="/Users/sergey/Desktop/MatrixProj/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/kirill/CLion/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/kirill/CLion/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/kirill/CLion/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/kirill/CLion/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/sergey/Desktop/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sergey/Desktop/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sergey/Desktop/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sergey/Desktop/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/kirill/CLion/MatrixProj/cmake-build-debug"/>
+				<Option working_dir="/Users/sergey/Desktop/MatrixProj/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/kirill/CLion/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/kirill/CLion/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/kirill/CLion/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/kirill/CLion/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/sergey/Desktop/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sergey/Desktop/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sergey/Desktop/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sergey/Desktop/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/kirill/CLion/MatrixProj/cmake-build-debug"/>
+				<Option working_dir="/Users/sergey/Desktop/MatrixProj/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/kirill/CLion/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/kirill/CLion/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/kirill/CLion/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/kirill/CLion/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/sergey/Desktop/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sergey/Desktop/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sergey/Desktop/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sergey/Desktop/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="laba">
-				<Option output="/Users/kirill/CLion/MatrixProj/cmake-build-debug/laba" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/kirill/CLion/MatrixProj/cmake-build-debug"/>
+				<Option output="/Users/sergey/Desktop/MatrixProj/cmake-build-debug/laba" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/sergey/Desktop/MatrixProj/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="clang"/>
 				<Compiler>
+					<Add directory="/Library/Frameworks/SDL2.framework"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/kirill/CLion/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 laba"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/kirill/CLion/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/kirill/CLion/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/kirill/CLion/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/sergey/Desktop/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 laba"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sergey/Desktop/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sergey/Desktop/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sergey/Desktop/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="laba/fast">
-				<Option output="/Users/kirill/CLion/MatrixProj/cmake-build-debug/laba" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/kirill/CLion/MatrixProj/cmake-build-debug"/>
+				<Option output="/Users/sergey/Desktop/MatrixProj/cmake-build-debug/laba" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/sergey/Desktop/MatrixProj/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="clang"/>
 				<Compiler>
+					<Add directory="/Library/Frameworks/SDL2.framework"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/kirill/CLion/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 laba/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/kirill/CLion/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/kirill/CLion/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/kirill/CLion/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/sergey/Desktop/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 laba/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/sergey/Desktop/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/sergey/Desktop/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/sergey/Desktop/MatrixProj/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/kirill/CLion/MatrixProj/Controller.h">
+		<Unit filename="/Users/sergey/Desktop/MatrixProj/Controller.h">
 			<Option target="laba"/>
 		</Unit>
-		<Unit filename="/Users/kirill/CLion/MatrixProj/Line.h">
+		<Unit filename="/Users/sergey/Desktop/MatrixProj/Line.h">
 			<Option target="laba"/>
 		</Unit>
-		<Unit filename="/Users/kirill/CLion/MatrixProj/Matrix.h">
+		<Unit filename="/Users/sergey/Desktop/MatrixProj/Matrix.h">
 			<Option target="laba"/>
 		</Unit>
-		<Unit filename="/Users/kirill/CLion/MatrixProj/Shape.h">
+		<Unit filename="/Users/sergey/Desktop/MatrixProj/Shape.h">
 			<Option target="laba"/>
 		</Unit>
-		<Unit filename="/Users/kirill/CLion/MatrixProj/main.cpp">
+		<Unit filename="/Users/sergey/Desktop/MatrixProj/main.cpp">
 			<Option target="laba"/>
 		</Unit>
-		<Unit filename="/Users/kirill/CLion/MatrixProj/CMakeLists.txt">
+		<Unit filename="/Users/sergey/Desktop/MatrixProj/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

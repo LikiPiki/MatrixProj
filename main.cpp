@@ -6,6 +6,7 @@
 
 #include "Controller.h"
 #include "Line.h"
+#include "BLine.h"
 #include "Shape.h"
 #include "Matrix.h"
 
@@ -15,10 +16,14 @@ using namespace std;
 int main(int argc, char* argv[]) {
 
     SDL_Renderer *renderer;
+    auto *controller = new Controller();
+
     auto *ln = new Line(100, 400, 250, 140);
 
-    vector<Shape*> shapes;
-    shapes.push_back(ln);
+    auto *bl = new BLine(10, 10, 300, 15);
+
+    controller->push(ln);
+    controller->push(bl);
 
     // drawer
     if (SDL_Init(SDL_INIT_VIDEO) == 0) {
@@ -34,14 +39,14 @@ int main(int argc, char* argv[]) {
                 SDL_SetRenderDrawColor(renderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
                 SDL_RenderClear(renderer);
 
-                display(renderer, shapes);
+                controller->display(renderer);
                 
                 SDL_RenderPresent(renderer);
                 while (SDL_PollEvent(&event)) {
                     if (event.type == SDL_QUIT) {
                         done = SDL_TRUE;
                     }
-                    checkKeys(event, ln);
+                    controller->checkKeys(event);
                 }
             }
         }

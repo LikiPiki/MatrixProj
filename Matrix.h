@@ -104,7 +104,7 @@ public:
 		return this;
 	}
 
-	Matrix* createRotateMatrixX(double angle) {
+	Matrix* createRotateMatrix(double angle) {
 		angle = angleToRad(angle);
 		createSimpleMatrix(3);
 		mas[0][0] = cos(angle);

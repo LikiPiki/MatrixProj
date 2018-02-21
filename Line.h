@@ -42,7 +42,7 @@ public:
 		mt->printMatrix();
 	}
 
-	void scale(double sx, double sy) {
+	void scale(double sx, double sy) override {
 		auto *scale = new Matrix();
 		scale->generateScaleMatrix(sx, sy);
 
@@ -53,9 +53,9 @@ public:
 		mt->printMatrix();
 	}
 
-    void rotateX(double angle) {
+    void rotate(double angle) override {
         auto rotateX = new Matrix();
-        rotateX->createRotateMatrixX(angle);
+        rotateX->createRotateMatrix(angle);
 
         moveToZero();
         mt = mt->mul(rotateX);
