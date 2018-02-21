@@ -15,7 +15,7 @@ using namespace std;
 int main(int argc, char* argv[]) {
 
     SDL_Renderer *renderer;
-    Line *ln = new Line(100, 150, 250, 300);
+    auto *ln = new Line(100, 150, 250, 300);
     ln->move(10, 10);
 
     vector<Shape*> shapes;
@@ -23,14 +23,14 @@ int main(int argc, char* argv[]) {
 
     // drawer
     if (SDL_Init(SDL_INIT_VIDEO) == 0) {
-        SDL_Window* window = NULL;
-        renderer = NULL;
+        SDL_Window* window = nullptr;
+        renderer = nullptr;
 
         if (SDL_CreateWindowAndRenderer(640, 480, 0, &window, &renderer) == 0) {
             SDL_bool done = SDL_FALSE;
 
             while (!done) {
-                SDL_Event event;
+                SDL_Event event{};
 
                 SDL_SetRenderDrawColor(renderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
                 SDL_RenderClear(renderer);

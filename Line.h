@@ -26,20 +26,20 @@ public:
 		mt->printMatrix();
 	}
 
-	void draw(SDL_Renderer *renderer) {
+	void draw(SDL_Renderer *renderer) override {
         SDL_SetRenderDrawColor(renderer, 255, 255, 255, SDL_ALPHA_OPAQUE);
-		SDL_RenderDrawLine(renderer, mt->mas[0][0], mt->mas[0][1], mt->mas[1][0], mt->mas[1][1]); 
+		SDL_RenderDrawLine(renderer, mt->mas[0][0], mt->mas[0][1], mt->mas[1][0], mt->mas[1][1]);
 	}
 
 	void move(double dx, double dy) {
-		Matrix *move = new Matrix();
+		auto *move = new Matrix();
 		move->generateMoveMatrix(dx, dy);
 		mt = mt->mul(move);
 		mt->printMatrix();
 	}
 
 	void scale(double sx, double sy) {
-		Matrix *scale = new Matrix();
+		auto *scale = new Matrix();
 		scale->generateScaleMatrix(sx, sy);
 		mt = mt->mul(scale);
 		mt->printMatrix();
