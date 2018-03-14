@@ -12,6 +12,15 @@ public:
 
     void draw(SDL_Renderer *renderer) override {
         SDL_SetRenderDrawColor(renderer, 0, 255, 0, SDL_ALPHA_OPAQUE);
+        for (int i = 0; i < mt->n; i++) {
+            for (int j = 0; j < mt->m; j++) {
+                dm->mas[i][j] = mt->mas[i][j];
+            }
+        }
+        cout << "Angle is " << angle << endl;
+
+        rotate(angle);
+
         double x1 = mt->mas[0][0];
         double x2 = mt->mas[1][0];
         double y1 = mt->mas[0][1];
@@ -40,7 +49,14 @@ public:
                 y1 += signY;
             }
         }
+
+        for (int i = 0; i < mt->n; i++) {
+            for (int j = 0; j < mt->m; j++) {
+                mt->mas[i][j] = dm->mas[i][j];
+            }
+        }
     }
+
 
 };
 

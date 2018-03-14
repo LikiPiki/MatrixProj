@@ -14,11 +14,18 @@ public:
 	const int N = 2;
 	const int M = 3;
 
+	int angle = 0;
+
 	Matrix *mt;
+	Matrix *dm;
 
 	Line(int x1, int y1, int x2, int y2) {
 		mt = new Matrix();
+        dm = new Matrix();
+
 		mt->createM1(2, 3);
+		dm->createM1(2, 3);
+
 		mt->mas[0][0] = x1;
 		mt->mas[0][1] = y1;
 		mt->mas[1][0] = x2;
@@ -28,11 +35,31 @@ public:
 
 
 	void draw(SDL_Renderer *renderer) override {
+
+		for (int i = 0; i < mt->n; i++) {
+			for (int j = 0; j < mt->m; j++) {
+                dm->mas[i][j] = mt->mas[i][j];
+			}
+		}
+        cout << "Angle is " << angle << endl;
+
+        rotate(angle);
+
         SDL_SetRenderDrawColor(renderer, 255, 255, 255, SDL_ALPHA_OPAQUE);
 		SDL_RenderDrawLine(renderer,
-                           ceil(mt->mas[0][0]), ceil(mt->mas[0][1]),
-                           ceil(mt->mas[1][0]), ceil(mt->mas[1][1])
+                           (mt->mas[0][0]), ceil(mt->mas[0][1]),
+                           (mt->mas[1][0]), ceil(mt->mas[1][1])
         );
+
+        for (int i = 0; i < mt->n; i++) {
+            for (int j = 0; j < mt->m; j++) {
+                mt->mas[i][j] = dm->mas[i][j];
+            }
+        }
+	}
+
+	void changeAngle(double an) override {
+        this->angle += an;
 	}
 
 	void move(double dx, double dy) override{

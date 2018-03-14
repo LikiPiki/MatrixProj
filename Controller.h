@@ -52,10 +52,10 @@ public:
 					shapes[selected]->scale(0.90, 0.90);
 					break;
 				case SDLK_q:
-					shapes[selected]->rotate(5);
+					shapes[selected]->changeAngle(5);
 					break;
 				case SDLK_w:
-					shapes[selected]->rotate(-5);
+					shapes[selected]->changeAngle(-5);
 					break;
 				default:break;
 			}
